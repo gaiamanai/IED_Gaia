@@ -19,9 +19,28 @@ class Authview extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Title', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.orange[300])),
-                    Text('Placeholder text',
-                    style: TextStyle(fontSize: 72,color: Colors.orange[300]),),
+                    Text('ChatGPT',
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.orange[300])),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Placeholder text',
+                          style: TextStyle(
+                              fontSize: 72,
+                              color: Colors.orange[300],
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Placeholder text',
+                          style: TextStyle(
+                              fontSize: 48, color: Colors.orange[300]),
+                        ),
+                      ],
+                    ),
                     SizedBox.shrink()
                   ],
                 ),
@@ -29,25 +48,59 @@ class Authview extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Center(
-              child: SizedBox (
-                width: 480,
-                child: Column
-                (
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+              child: Center(
+                  child: SizedBox(
+            width: 480,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
                   SizedBox.shrink(),
                   Column(
                     children: [
-                      Text('placeholder'),
-                      Container(
-                        width: double.infinity,
-                        height: 56,
-                        decoration: BoxDecoration(color: Colors.blue[500],borderRadius: BorderRadius.circular(8)),
-                        child: Center(
-                          child: Text('placeholder'),
-                        )
-                      )                
+                      Text(
+                        'Get started',
+                        style: TextStyle(
+                            fontSize: 32, fontWeight: FontWeight.bold),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                                height: 56,
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 45, 64, 232),
+                                    borderRadius: BorderRadius.circular(8)),
+                                child: Center(
+                                  child: Text('Log in',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: const Color.fromARGB(
+                                              255, 232, 232, 232))),
+                                )),
+                          ),
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Expanded(
+                            child: Container(
+                                height: 56,
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 45, 64, 232),
+                                    borderRadius: BorderRadius.circular(8)),
+                                child: Center(
+                                  child: Text('Sign up',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: const Color.fromARGB(
+                                              255, 232, 232, 232))),
+                                )),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   Column(
@@ -56,18 +109,40 @@ class Authview extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('text'),
-                          Container(),
-                          Text('text'),
+                          Text(
+                            'Terms of use',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color:
+                                    const Color.fromARGB(255, 117, 117, 117)),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                              width: 1,
+                              height: 16,
+                              decoration: BoxDecoration(
+                                  color: const Color.fromARGB(
+                                      255, 117, 117, 117))),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Privacy policy',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color:
+                                    const Color.fromARGB(255, 117, 117, 117)),
+                          ),
                         ],
                       ),
                     ],
                   ),
-                
-                ],),
+                ],
               ),
-            )
-            )
+            ),
+          )))
         ],
       ),
     );
