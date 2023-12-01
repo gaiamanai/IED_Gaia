@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ied_gaia/src/presentation/auth/auth.dart';
+import 'package:ied_gaia/src/presentation/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const Authview(),
+      home:
+          const HomeView(), //per cambiare visualizzazione pagina cambiare 'homeview'
     );
   }
 }
-
